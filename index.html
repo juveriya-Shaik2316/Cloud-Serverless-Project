@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cloud File Manager</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header>
+    <h1>Cloud File Manager</h1>
+    <p>Upload, download, and manage your files securely in the cloud.</p>
+  </header>
+
+  <main>
+    <section id="upload-section">
+      <h2>Upload File</h2>
+      <form id="upload-form">
+        <input type="file" id="pdfFile" accept=".pdf" required />
+        <button type="submit">Upload</button>
+      </form>
+      <div id="upload-message"></div>
+    </section>
+
+    <section id="file-list-section">
+      <h2>Your Files</h2>
+      <ul id="file-list"></ul>
+    </section>
+  </main>
+
+  <!-- Add buttons for download and delete actions -->
+  <section id="file-actions-section">
+    <h2>File Actions</h2>
+    <div id="file-actions">
+      <!-- These buttons will be dynamically populated with file names on page load -->
+    </div>
+  </section>
+
+  <script src="https://sdk.amazonaws.com/js/aws-sdk-2.984.0.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
